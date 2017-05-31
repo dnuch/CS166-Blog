@@ -14,7 +14,7 @@ stmt.setString(2, blogcontent);
 stmt.setString(3, user);
 stmt.setString(4, fullname);
 stmt.execute();
-response.sendRedirect("blog_list.jsp"); 
+response.sendRedirect("../blog_list.jsp"); 
 %>
 
 <%

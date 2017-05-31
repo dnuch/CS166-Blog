@@ -3,34 +3,33 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="../stylesheets/footer.css">
     </head>
     <body>
         <div class="content">
             <div class="w3-bar w3-blue">
-                <a class="w3-bar-item w3-button" href="index.jsp">CS166 Blog</a>
-                <a class="w3-bar-item w3-button" href="crypto_form.html">Types of Crypto</a>
+                <a class="w3-bar-item w3-button" href="../index.jsp">CS166 Blog</a>
+                <a class="w3-bar-item w3-button" href="../crypto_form.html">Types of Crypto</a>
                 <div class="w3-dropdown-hover">
                     <a class="w3-button">Demonstrations</a>
                     <div class="w3-dropdown-content w3-bar-block w3-border w3-card">
                         <a href="sql_injection.html" class="w3-bar-item w3-button">SQL Injection Attack</a>
                         <a href="CSS_injection.html" class="w3-bar-item w3-button">Cross Site Script Injection Attack</a>
-                        <a href="website_deface.html" class="w3-bar-item w3-button">Web Site Defacement</a>
+                        <a href="website_deface.html" class="w3-bar-item w3-button">Web Site Defacing</a>
                         <a href="cookies.jsp" class="w3-bar-item w3-button">Use of Cookies</a>
                         <a href="session_management.html" class="w3-bar-item w3-button">Session Mechanism</a>
                     </div>
                 </div>
-                <a class="w3-bar-item w3-right w3-button w3-hover-red" href="logout_action.jsp">Log Out</a>
+                <a class="w3-bar-item w3-right w3-button w3-hover-red" href="../action/logout_action.jsp">Log Out</a>
             </div>
             <div class="w3-container">
                 <br>
-                <h><strong>Website Defacement</strong></h>
-                <p>This is an attack on a website to visually change a web page. My example will include defacing an empty page with an image of your choice.</p>
-                <br>
+                <h><strong>Cross Site Script Injection Attack</strong></h>
+                <p>Cross site scripting is when malicious scripts are injected into web sites where attackers use a browser side script that manipulates user input where the output generates without validating or encoding the input.  The end user browser then takes the scripts and runs it as the script is not deemed malicious.</p>
                 <h><strong>Exploitation</strong></h>
-                <p>Input: Whatever is input will be displayed for example - enter this: &ltimg src="http://placehold.it/350x150"&gt</p>
+                <p>Input: Whatever is input will be displayed for example - enter this: &ltscript&gtalert( 'Hello, world!' );&lt/script&gt</p>
                 <p></p>
-                <form target ="_blank" class="w3-container" style="width:25%" action="defaceAction.jsp">
+                <form target ="_blank" class="w3-container" style="width:25%" action="../action/defaceAction.jsp">
                     <p>
                         <label>Input</label>
                         <input class="w3-input w3-border" name="input"><br>
@@ -49,7 +48,7 @@
         </div>
         <footer class="w3-bar w3-blue">
             <a class="w3-bar-item">&copy Danny Nuch</a>
-            <a class="w3-bar-item w3-btn w3-opacity" href="privacy_statement.html">Privacy</a>
+            <a class="w3-bar-item w3-btn w3-opacity" href="../privacy_statement.html">Privacy</a>
         </footer>
     </body>
 </html>

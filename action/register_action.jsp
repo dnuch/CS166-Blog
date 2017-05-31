@@ -14,7 +14,7 @@
    stmt.setString(1, user);
    ResultSet rs = stmt.executeQuery();
    if(recaptcha.equals("") || rs.next()) {
-       response.sendRedirect("register_form.html");
+       response.sendRedirect("../register_form.html");
    } else {
        Random RANDOM = new SecureRandom();
        int ITERATIONS = 10000;
@@ -36,7 +36,7 @@
        stmt.setBytes (4, salt);   
        stmt.setInt   (5, 0);   //Default admin = 0
        stmt.execute();
-       response.sendRedirect("login_form.html"); 
+       response.sendRedirect("../login_form.html"); 
    }
    //SQL injection attack
    // a' OR 1=1 --

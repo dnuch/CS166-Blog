@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<%@include file="db.jsp" %><%
+<%@include file="action/db.jsp" %><%
 
 String user = (String) session.getAttribute( "user" );
 String fullname = (String) session.getAttribute( "fullname" );
@@ -20,7 +20,7 @@ ResultSet rs = stmt.executeQuery("SELECT * FROM blog");
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="stylesheets/footer.css">
     </head>
     <body>
         <div class="content">
@@ -31,14 +31,14 @@ ResultSet rs = stmt.executeQuery("SELECT * FROM blog");
                 <div class="w3-dropdown-hover">
                     <a class="w3-button">Demonstrations</a>
                     <div class="w3-dropdown-content w3-bar-block w3-border w3-card">
-                        <a href="sql_injection.html" class="w3-bar-item w3-button">SQL Injection Attack</a>
-                        <a href="CSS_injection.html" class="w3-bar-item w3-button">Cross Site Script Injection Attack</a>
-                        <a href="website_deface.html" class="w3-bar-item w3-button">Web Site Defacing</a>
-                        <a href="cookies.jsp" class="w3-bar-item w3-button">Use of Cookies</a>
-                        <a href="session_management.html" class="w3-bar-item w3-button">Session Mechanism</a>
+                        <a href="demonstrations/sql_injection.html" class="w3-bar-item w3-button">SQL Injection Attack</a>
+                        <a href="demonstrations/CSS_injection.html" class="w3-bar-item w3-button">Cross Site Script Injection Attack</a>
+                        <a href="demonstrations/website_deface.html" class="w3-bar-item w3-button">Web Site Defacing</a>
+                        <a href="demonstrations/cookies.jsp" class="w3-bar-item w3-button">Use of Cookies</a>
+                        <a href="demonstrations/session_management.html" class="w3-bar-item w3-button">Session Mechanism</a>
                     </div>
                 </div>
-                <a class="w3-bar-item w3-right w3-button w3-hover-red" href="logout_action.jsp">Log Out</a>
+                <a class="w3-bar-item w3-right w3-button w3-hover-red" href="action/logout_action.jsp">Log Out</a>
             </div>
             <div class="w3-container">
                 <h1>Welcome, <%= fullname %></h1>           
@@ -47,7 +47,7 @@ ResultSet rs = stmt.executeQuery("SELECT * FROM blog");
                          <div class="w3-center"><br>
                             <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright">&times;</span>
                         </div> 
-                    <form class="w3-container" action='blog_action.jsp'>
+                    <form class="w3-container" action='action/blog_action.jsp'>
                         <div class="w3-section">
                             <label><b>Blog Title</b></label>
                             <input class="w3-input w3-border w3-margin-bottom" name='blogtitle' size=100 required/>
@@ -60,7 +60,7 @@ ResultSet rs = stmt.executeQuery("SELECT * FROM blog");
                 </div>    
             </div>
             <br>
-            <form action='blog_delete.jsp' method='POST'>
+            <form action='action/blog_delete.jsp' method='POST'>
                 <%
                 while ( rs.next() ) {
                    //pageContext.setAttribute("blog_content", rs.getString("content"));

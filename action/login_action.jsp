@@ -12,7 +12,7 @@
    stmt.setString(1, user);
    ResultSet rs = stmt.executeQuery();
    if(!rs.next()) {
-       response.sendRedirect("login_form.html");
+       response.sendRedirect("../login_form.html");
    } else {
        byte[] salt = rs.getBytes("salt");
 
@@ -31,9 +31,9 @@
            session.setAttribute( "fullname", rs.getString("fullname") );
            session.setAttribute( "admin", rs.getInt("admin") );
            session.setMaxInactiveInterval(60*20);
-           response.sendRedirect("blog_list.jsp");	
+           response.sendRedirect("../blog_list.jsp");	
        } else {
-           response.sendRedirect("login_form.html");
+           response.sendRedirect("../login_form.html");
        }
    }
 %>
