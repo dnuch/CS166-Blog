@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="footer.css">
+    </head>
+    <body>
+        <div class="content">
+            <div class="w3-bar w3-blue">
+                <a class="w3-bar-item w3-button" href="index.jsp">CS166 Blog</a>
+                <a class="w3-bar-item w3-button" href="crypto_form.html">Types of Crypto</a>
+                <div class="w3-dropdown-hover">
+                    <a class="w3-button">Demonstrations</a>
+                    <div class="w3-dropdown-content w3-bar-block w3-border w3-card">
+                        <a href="sql_injection.html" class="w3-bar-item w3-button">SQL Injection Attack</a>
+                        <a href="CSS_injection.html" class="w3-bar-item w3-button">Cross Site Script Injection Attack</a>
+                        <a href="website_deface.html" class="w3-bar-item w3-button">Web Site Defacing</a>
+                        <a href="cookies.jsp" class="w3-bar-item w3-button">Use of Cookies</a>
+                        <a href="session_management.html" class="w3-bar-item w3-button">Session Mechanism</a>
+                    </div>
+                </div>
+                <a class="w3-bar-item w3-right w3-button w3-hover-red" href="logout_action.jsp">Log Out</a>
+            </div>
+            <div class="w3-container">
+                <br>
+                <h><strong>SQL Injection Attack</strong></h>
+                <p>SQL code injection technique involves placement of malicious code in SQL statements via web page input which may disrupt/destroy SQL database.   For example: ‘ OR ‘1’=1’ -- submitted into an input field would cause this parameter to be true for a statement such as : SELECT * FROM login WHERE user = + “userParam”.  Since ‘1’=’1’ this statement returns true thus causing SQL to select all counts of login. In order to prevent this attack, one must accept parameters as: SELECT * FROM login WHERE user = ?.  Then one must setString(1, userParam) which causes the input to be placed directly in the database where the sql string will not get manipulated.</p>
+                <br>
+                <h><strong>Exploitation</strong></h>
+                <p><a target="_blank" href="https://image.prntscr.com/image/8a70dc16ded74076b1ff99d667f46715.png">Current Code</a></p>
+                <p>Input: ' OR 1=1 -- (Returns true, any other input produces error)</p>
+                <form target ="_blank" class="w3-container" style="width:25%" action="sqlAttack_action.jsp">
+                    <p>
+                        <label>Username</label>
+                        <input class="w3-input w3-border" name="testinjection"><br>
+                    </p>  
+                    <p>
+                        <div class="w3-center">
+                            <button class="w3-btn w3-blue w3-ripple w3-round">Enter</button><br>
+                        </div>
+                    </p>
+                </form>
+                <br>
+                <h>Prevention Code: <a target="_blank" href="https://image.prntscr.com/image/85b4ff74886543c887243fe250bf257e.png">Use Prepared Statements</a></h>
+            </div>
+        </div>
+        <footer class="w3-bar w3-blue">
+            <a class="w3-bar-item">&copy Danny Nuch</a>
+            <a class="w3-bar-item w3-btn w3-opacity" href="privacy_statement.html">Privacy</a>
+        </footer>
+    </body>
+</html>
